@@ -1,0 +1,258 @@
+##########################################################################
+# Better Subjects Policies
+##########################################################################
+
+subjects_taxation {
+
+	potential = {
+		any_subject = {
+			OR = {
+				is_subject_type = "vassal"
+				is_subject_type = "tvassal"
+				is_subject_type = "protectorate"
+				is_subject_type = "tprotectorate"
+			}
+		}
+	}
+
+	option {
+		name = "dont_tax_subjects"
+
+		policy_flags = {
+			dont_tax_subjects
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personalty = yes
+				has_ai_personality_behaviour = liberator
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_fanatic_xenophobe"
+					has_ethic = "ethic_fanatic_collectivist"
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality_behaviour = infiltrator
+					has_ai_personality_behaviour = slaver
+				}
+			}
+		}
+	}
+
+	option {
+		name = "tax_vassals"
+
+		policy_flags = {
+			tax_vassals
+		}
+
+		valid = {
+			NOR = {
+				has_policy_flag = subsidize_vassals
+				has_policy_flag = subsidize_all_subjects
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_collectivist"
+					has_ethic = "ethic_militarist"
+				}
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes					has_ai_personality_behaviour = uplifter
+			}
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+	}
+
+	option {
+		name = "tax_protectorates"
+
+		policy_flags = {
+			tax_protectorates
+		}
+
+		valid = {
+			NOR = {
+				has_policy_flag = subsidize_protectorates
+				has_policy_flag = subsidize_all_subjects
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_materialist"
+				}
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personalty = yes
+				has_ai_personality_behaviour = opportunist
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes					has_ai_personality_behaviour = liberator
+			}
+		}
+	}
+
+	option {
+		name = "tax_all_subjects"
+
+		policy_flags = {
+			tax_all_subjects
+		}
+
+		valid = {
+			has_policy_flag = no_subsidies
+		}
+
+		AI_weight = {
+			modifier = {
+			 factor = 2
+			 OR = {
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_fanatic_collectivist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_materialist"
+			 }
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_ai_personality_behaviour = infiltrator
+					has_ai_personality_behaviour = slaver
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = liberator
+			}
+		}
+	}
+}
+
+subjects_support {
+
+	potential = {
+		any_subject = {
+			OR = {
+				is_subject_type = "vassal"
+				is_subject_type = "tvassal"
+				is_subject_type = "protectorate"
+				is_subject_type = "tprotectorate"
+			}
+		}
+	}
+
+	option {
+		name = "no_subsidies"
+
+		policy_flags = {
+			no_subsidies
+		}
+	}
+
+	option {
+		name = "subsidize_vassals"
+
+		policy_flags = {
+			subsidize_vassals
+		}
+
+		valid = {
+			NOR = {
+				has_policy_flag = tax_vassals
+				has_policy_flag = tax_all_subjects
+			}
+		}
+
+		modifier = {
+			influence_gain_add = 3
+			tile_resource_minerals_mult = -0.10
+			tile_resource_energy_mult = -0.10
+		}
+	}
+
+	option {
+		name = "subsidize_protectorates"
+
+		policy_flags = {
+			subsidize_protectorates
+		}
+
+		valid = {
+			NOR = {
+				has_policy_flag = tax_protectorates
+				has_policy_flag = tax_all_subjects
+			}
+		}
+
+		modifier = {
+			influence_gain_add = 3
+			all_technology_research_speed = -0.10
+		}
+	}
+
+	option = {
+		name = "subsidize_all_subjects"
+
+		policy_flags = {
+			subsidize_all_subjects
+		}
+
+		valid = {
+			has_policy_flag = dont_tax_subjects
+			any_subject = {
+				is_subject_type = "vassal"
+			}
+		}
+
+		modifier = {
+			influence_gain_add = 6
+			tile_resource_minerals_mult = -0.10
+			tile_resource_energy_mult = -0.10
+			all_technology_research_speed = -0.10
+		}
+	}
+
+}

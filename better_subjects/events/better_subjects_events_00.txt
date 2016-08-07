@@ -1,0 +1,260 @@
+##########################################################################
+# Better Subjects Events
+##########################################################################
+
+namespace = better_subjects
+
+### Subjects Taxation
+
+country_event {
+  id = better_subjects.10
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = { is_subject_type = "tvassal" }
+      set_subject_of {
+        who = ROOT
+        subject_type = vassal
+      }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+
+    every_subject = {
+      limit = { is_subject_type = "tprotectorate" }
+      set_subject_of {
+        who = ROOT
+        subject_type = protectorate
+      }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+  }
+}
+
+country_event {
+  id = better_subjects.11
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = { is_subject_type = "vassal" }
+      set_subject_of {
+        who = ROOT
+        subject_type = tvassal
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+
+    every_subject = {
+      limit = { is_subject_type = "tprotectorate" }
+      set_subject_of = {
+        who = ROOT
+        subject_type = protectorate
+      }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+  }
+}
+
+country_event {
+  id = better_subjects.12
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = { is_subject_type = "protectorate" }
+      set_subject_of = {
+        who = ROOT
+        subject_type = tprotectorate
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+
+    every_subject = {
+      limit = { is_subject_type = "tvassal" }
+      set_subject_of = {
+        who = ROOT
+        subject_type = vassal
+      }
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+  }
+}
+
+country_event = {
+  id = better_subjects.13
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = {	is_subject_type = "vassal" }
+      set_subject_of = {
+        who = ROOT
+        subject_type = tvassal
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+
+    every_subject = {
+      limit = { is_subject_type = "protectorate"}
+      set_subject_of = {
+        who = ROOT
+        subject_type = tprotectorate
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_taxes
+      }
+    }
+  }
+}
+
+### Subjects Support
+
+country_event = {
+  id = better_subjects.20
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_subsidies
+      }
+    }
+
+    every_subject = {
+      limit = { is_subject_type = "vassal" }
+      remove_modifier = overlord_subsidies_vassal
+    }
+
+    every_subject = {
+      limit = { is_subject_type = "protectorate" }
+      remove_modifier = overlord_subsidies_protectorate
+    }
+  }
+
+}
+
+country_event = {
+  id = better_subjects.21
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = { is_subject_type = "vassal" }
+      add_modifier = {
+        modifier = overlord_subsidies_vassal
+        days = -1
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_subsidies
+      }
+    }
+
+    every_subject = {
+      limit = { is_subject_type = "protectorate" }
+      remove_modifier = overlord_subsidies_protectorate
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_subsidies
+      }
+    }
+  }
+}
+
+country_event = {
+  id = better_subjects.22
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      limit = { is_subject_type = "protectorate" }
+      add_modifier = {
+        modifier = overlord_subsidies_protectorate
+        days = -1
+      }
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_subsidies
+      }
+    }
+
+    every_subject = {
+      limit = { is_subject_type = "vassal" }
+      remove_modifier = overlord_subsidies_vassal
+      remove_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_subsidies
+      }
+    }
+  }
+}
+
+country_event = {
+  id = better_subjects.23
+
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_subject = {
+      add_opinion_modifier = {
+        who = ROOT
+        modifier = opinion_subjects_subsidies
+      }
+    }
+
+    every_subject = {
+      limit = { is_subject_type = "vassal" }
+      add_modifier = {
+        modifier = overlord_subsidies_vassal
+      }
+    }
+
+    every_subject = {
+      limit = { is_subject_type = "protectorate" }
+      add_modifier = {
+        modifier = overlord_subsidies_protectorate
+      }
+    }
+  }
+}
+
+### Subjects Military

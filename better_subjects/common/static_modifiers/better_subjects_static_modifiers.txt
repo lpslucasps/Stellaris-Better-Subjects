@@ -1,0 +1,15 @@
+##########################################################################
+# Better Subjects Static Modifiers
+##########################################################################
+
+overlord_subsidies_vassal = {
+  tile_resource_minerals_mult = 0.05
+  tile_resource_energy_mult = 0.05
+}
+
+overlord_subsidies_protectorate = {
+  tile_resource_physics_research_mult = 0.25
+  tile_resource_society_research_mult = 0.25
+  tile_resource_engineering_research_mult = 0.25
+  all_technology_research_speed = 0.25
+}

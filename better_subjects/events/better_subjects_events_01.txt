@@ -1,0 +1,214 @@
+##########################################################################
+# Better Subjects Events
+##########################################################################
+
+namespace = better_subjects
+### Subjects Taxation
+
+# Don't Tax Subjects
+country_event {
+	id = better_subjects.100
+
+	hide_window = yes
+
+	trigger = {
+		last_changed_policy = subjects_taxation
+		has_policy_flag = dont_tax_subjects
+	}
+
+	immediate = {
+		country_event = { id = better_subjects.10 }
+	}
+}
+
+# Tax Vassals only
+country_event {
+	id = better_subjects.101
+
+	hide_window = yes
+
+	trigger = {
+		last_changed_policy = subjects_taxation
+		has_policy_flag = tax_vassals
+	}
+
+	immediate = {
+		country_event = { id = better_subjects.11 }
+	}
+}
+
+# Tax Protectorates only
+country_event {
+	id = better_subjects.102
+
+	hide_window = yes
+
+	trigger = {
+		last_changed_policy = subjects_taxation
+		has_policy_flag = tax_protectorates
+	}
+
+	immediate = {
+		country_event = { id = better_subjects.12 }
+	}
+}
+
+# Tax all subjects, protectorates and vassals
+country_event {
+	id = better_subjects.103
+
+	hide_window = yes
+
+	trigger = {
+		last_changed_policy	= subjects_taxation
+		has_policy_flag = tax_all_subjects
+	}
+
+	immediate = {
+		country_event = { id = better_subjects.13 }
+	}
+}
+
+# Yearly pulse
+country_event = {
+	id = better_subjects.1000
+
+	hide_window = yes
+
+	mean_time_to_happen = { days = 30 }
+
+	trigger = {
+		OR = {
+			has_policy_flag = dont_tax_subjects
+			has_policy_flag = tax_vassals
+			has_policy_flag = tax_protectorates
+			has_policy_flag = tax_all_subjects
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { has_policy_flag = dont_tax_subjects }
+			country_event = { id = better_subjects.10 }
+		}
+		if = {
+			limit = { has_policy_flag = tax_vassals }
+			country_event = { id = better_subjects.11 }
+		}
+		if = {
+			limit = { has_policy_flag = tax_protectorates	}
+			country_event = { id = better_subjects.12 }
+		}
+		if = {
+			limit = { has_policy_flag = tax_all_subjects }
+			country_event = { id = better_subjects.13 }
+		}
+	}
+}
+
+
+### Subjects Support
+
+# No subsidies
+country_event = {
+	id = better_subjects.200
+
+	hide_window = yes
+
+	trigger = {
+		last_changed_policy = subjects_support
+		has_policy_flag = no_subsidies
+	}
+
+	immediate = {
+		country_event = { id = better_subjects.20 }
+	}
+}
+
+# Subsidize Vassals
+country_event = {
+	id = better_subjects.201
+
+	hide_window = yes
+
+	trigger = {
+		last_changed_policy = subjects_support
+		has_policy_flag = subsidize_vassals
+	}
+
+	immediate = {
+		country_event = { id = better_subjects.21 }
+	}
+}
+
+# Subsidize Protectorates
+country_event {
+	id = better_subjects.202
+
+	hide_window = yes
+
+	trigger = {
+		last_changed_policy = subjects_support
+		has_policy_flag = subsidize_protectorates
+	}
+
+	immediate = {
+		country_event = { id = better_subjects.22 }
+	}
+}
+
+# Subsidize All Subjects
+country_event = {
+	id = better_subjects.203
+
+	hide_window = yes
+
+	trigger = {
+		last_changed_policy = subjects_support
+		has_policy_flag = subsidize_all_subjects
+	}
+
+	immediate = {
+		country_event = {id = better_subjects.23 }
+	}
+}
+
+# Yearly pulse
+country_event = {
+	id = better_subjects.2000
+
+	hide_window = yes
+
+	mean_time_to_happen = { days = 30 }
+
+	trigger = {
+		OR = {
+			has_policy_flag = no_subsidies
+			has_policy_flag = subsidize_vassals
+			has_policy_flag = subsidize_protectorates
+			has_policy_flag = subsidize_all_subjects
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { has_policy_flag = no_subsidies }
+			country_event = { id = better_subjects.20 }
+		}
+
+		if = {
+			limit = { has_policy_flag = subsidize_vassals }
+			country_event = { id = better_subjects.21 }
+		}
+
+		if = {
+			limit = { has_policy_flag = subsidize_protectorates }
+			country_event = { id = better_subjects.22 }
+		}
+
+		if = {
+			limit = { has_policy_flag = subsidize_all_subjects }
+			country_event = { id = better_subjects.23 }
+		}
+	}
+}

@@ -1,0 +1,41 @@
+This mod adds two new policy trees called Subjects Taxation and Subjects Support, that gives you the possibility to tax or subside your Vassals or Protectorates (or both).
+
+With the Subjects Taxation policies, you can turn your Vassals and Protectorates into Tributary Vassals and Tributary Protectorates, respectively. They act just like their normal counterparts, but give you 10% of their montlhy income in Energy Credits and Minerals. But be careful: they'll not be happy about this new situation and you will receive a severe relationship penalty with them (-75 for vassals, -50 for protectorates).
+
+If you're feeling magnanimous, you can instead subsidize your subjects with the Subjects Support policies. Vassals can receive a bonus to Energy Credits and Minerals production, while Protectorates will have their scientific progress greatly improved. These policies will cost you money and science, but will make your subjects much more loyal to you.
+
+[h1]FEATURES[/h1]
+Two new policy trees that let you define your relationship with subjects: Subjects Taxation and Subjects Support
+
+[b]Subjects Taxation:[/b]
+[list][*][b]Don't Tax Anyone:[/b] no changes to Vassals or Protectorates
+[*][b]Tax Vassals:[/b] Vassals will become Tributary Vassals and give you 10% of their minerals and credits. They'll receive a -75 opinion modifier because of this.
+[*][b]Tax Protectorates:[/b] Protectorates will become Tributary Protectorates and give you 10% of their minerals and creditys. They'll receive a -50 opinion modifier because of this.
+[*][b]Tax All Subjects:[/b] All subjects, Vassals and Protectorates, will be taxed.[/list]
+
+[b]Subjects Support:[/b]
+[list][*][b]No Subsidies:[/b] no changes to Vassals or Protectorates.
+[*][b]Subsidize Vassals:[/b] Vassals will get the "Overlord Subsidies" modifier, granting them a 5% bonus to minerals and credits, and a +100 opinion modifier. You will get a -10% malus to minerals and credits while this policy is active.
+[*][b]Subsidize Protectorates:[/b] Protectorates will get the "Overlord Subsidies" modifier, granting them a 25% research speed bonus to all technologies, and a +100 opinion modifier. You will get a -10% malus to research speed while this policy is active.
+[*][b]Subsidize All Subjects:[/b] Vassals and Protectorates will get the "Overlord Subsidies" modifier, and a +100 opinion modifier. Your research speed, minerals and energy credits will be decreased by 10% while this policy is active.[/list]
+
+[h1]PLANNED FEATURES[/h1]
+[list][*]The option to let Vassals colonize
+[*]Demilitarization of subjects
+[*]The ability to demand subjects to stop atrocities (slavery, purging) and/or adopt a democratic government.
+[*]Exclusive events based on your policies with your subjects[/list]
+
+[h1]LIMITATIONS[/h1]
+[list][*]Empires vassalized after the policy change and protectorates that become vassals will take around 1 month to become Tributary Vassals. Think of this as the time your government needs to implement tax collection on gallactic levels.
+[*]There's no way to discriminate between subjects. The policies changes apply to all of them. Be careful.[/list]
+
+[h1]KNOWN ISSUES[/h1]
+[list][*]There's no icons for Tributary Vassals and Tributary Protectorates in the Diplomacy and Contacts screens. It seems the icons for those screens are hardcoded. If someone finds a way to add new icons, please, contact me![/list]
+
+[h1]COMPATIBILITY[/h1]
+
+This mod should be compatible with games in progress.
+
+This mod modifies the file common\diplomatic_actions\00_actions.txt, so there may be incompatibilities with mods that use the same file. The fixes implemented by the Unofficial Asimov Hotfix are already included.
+
+[i]Please, comment with suggestions and bug reports! Your feedback is greatly appreciated![/i]

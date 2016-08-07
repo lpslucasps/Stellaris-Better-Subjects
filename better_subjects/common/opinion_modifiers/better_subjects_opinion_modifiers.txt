@@ -1,0 +1,35 @@
+#########################################################################
+# Better Subjects Opinion Modifiers
+##########################################################################
+
+opinion_subjects_taxes = {
+	opinion {
+	 base = 0
+
+	 modifier = {
+	 	add = -75
+		is_subject_type = "tvassal"
+	 }
+	 modifier = {
+	 	add = -50
+		is_subject_type = "tprotectorate"
+	 }
+	}
+
+	unique = yes
+}
+
+opinion_subjects_subsidies = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = 100
+			OR = {
+				is_subject_type = "vassal"
+				is_subject_type = "protectorate"
+			}
+		}
+	}
+
+	unique = yes
+}
