@@ -1,0 +1,89 @@
+##########################################################################
+# Better Subjects Diplomatic Actions
+##########################################################################
+
+action_declare_war = {
+	requires_actor_independence = no # You are able to declare war only on your overlord when being a vassal, this special case is handled in code instead.
+	requires_recipient_independence = no
+	requires_alliance_vote = yes
+	requires_unanimous_vote = yes
+	auto_accepted = yes
+	should_show_auto_accept_message_actor = yes
+	should_show_auto_accept_message_recipient = yes
+	should_open_auto_accept_message_recipient = yes
+	should_notify_all_communications = yes
+    possible = {
+        OR = {
+            from = {
+                is_overlord_to = root
+            }
+            NOT = {
+							OR = {
+								is_subject_type = "protectorate"
+								is_subject_type = "tprotectorate"
+            }
+        }
+    }
+}
+
+action_guarantee_independence = {
+	auto_accepted = yes
+	should_notify_all_communications = yes
+	requires_recipient_independence = no
+
+	potential = {
+		# Cannot guarantee if you are a vassal
+		hidden_trigger = {
+			NOT = {
+				OR {
+					is_subject_type = "vassal"
+					is_subject_type = "tvassal"
+				}
+			}
+		}
+
+		# Cannot guarantee someone who is a vassal or protectorate
+		hidden_trigger = {
+			NOT = {
+				from = {
+					OR = {
+						is_subject_type = "vassal"
+						is_subject_type = "protectorate"
+						is_subject_type = "tvassal"
+						is_subject_type = "tprotectorate"
+					}
+				}
+			}
+		}
+
+		# Cannot guarantee if you are in an alliance
+		hidden_trigger = {
+			NOT = {
+				exists = alliance
+			}
+		}
+
+		# Cannot guarantee if they are in an alliance
+		hidden_trigger = {
+			from = {
+				NOT = {
+					exists = alliance
+				}
+			}
+		}
+
+		# Already guaranteeing
+		hidden_trigger = {
+			NOT = {
+				is_guaranteeing = from
+			}
+		}
+
+		# Defensive Pact
+		hidden_trigger = {
+			NOT = {
+				has_defensive_pact = from
+			}
+		}
+	}
+}

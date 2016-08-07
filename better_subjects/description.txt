@@ -17,8 +17,7 @@ Two new policy trees that let you define your relationship with subjects: "Taxat
 [list][*][b]No Subsidies:[/b] no changes to Vassals or Protectorates.
 [*][b]Subsidize Vassals:[/b] Vassals will get the "Overlord Subsidies" modifier, granting them a 5% bonus to minerals and credits, and a +100 opinion modifier. You will get a malus to minerals and credits while this policy is active that goes fro 5% to 15%, depending on the number of Vassals you have.
 [*][b]Subsidize Protectorates:[/b] Protectorates will get the "Overlord Subsidies" modifier, granting them a 25% research speed bonus to all technologies, and a +100 opinion modifier. You will get a -10% malus to all research outputs while this policy is active.
-
-However, the subsidization of Protectorates [i]can[/i] become a bonus. The scientific collaboration between your empire with its subjects will grant you +20 stored research of each type of science per Protectorate monthly. So, if you have enough Protectorates, you can end up with more science than before.
+[list][*]However, the subsidization of Protectorates [i]can[/i] become a bonus. The scientific collaboration between your empire with its subjects will grant you +20 stored research of each type of science per Protectorate monthly. So, if you have enough Protectorates, you can end up with more science than before.[/list]
 [*][b]Subsidize All Subjects:[/b] Vassals and Protectorates will get the "Overlord Subsidies" modifier, and a +100 opinion modifier. Your research speed, minerals and energy credits will be decreased by 10% while this policy is active.[/list]
 
 [h1]PLANNED FEATURES[/h1]

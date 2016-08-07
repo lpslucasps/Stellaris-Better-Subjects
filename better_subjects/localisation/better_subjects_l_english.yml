@@ -26,7 +26,7 @@
  no_subsidies_desc:0 "Our wealth should not be used to enrich other empires.\n\n§ENo changes in the relations with our subject empires§!"
  subsidize_vassals:0 "Subsidize Vassals"
  subsidize_vassals_name:0 "Subsidize Vassals"
- subsidize_vassals_desc:0 "We will give our Vassals economic support.\n\n§EAll of our Vassals will receive a §Y5%§! bonus to Minerals and Energy Credits production. Our relations with our Vassals will be greatly improved.§!\n\n§Y1 to 5 Vassals§!\n§R-5%§! Minerals and Energy Credits\n§Y6 to 10 Vassals§!\n§R-10%§! Minerals and Energy Credits\n§Y11 Vassals or more§!\n§R-15%§! Minerals and Energy Credits"
+ subsidize_vassals_desc:0 "We will give our Vassals economic support.\n\n§EAll of our Vassals will receive a §Y5%§! bonus to Minerals and Energy Credits production. Our relations with our Vassals will be greatly improved.§!\n\n§Y1 to 5 Vassals§!\n§R-5%§! Minerals and Energy Credits\n§Y6 to 10 Vassals§!\n§R-10%§! Minerals and Energy Credits\n§Y11 Vassals or more§!\n§R-15%§! Minerals and Energy Credits\n"
  subsidize_protectorates:0 "Subsidize Protectorates"
  subsidize_protectorates_name:0 "Subsidize Protectorates"
  subsidize_protectorates_desc:0 "We will give our Protectorates further scientific support.\n\n§EProtectorates will receive an extra §Y25%§! bonus to all researches. This scientific collaboration will grant us §G+20§! stored research of each type of science per Protectorate monthly and our relations with them will be greatly improved.§!\n\n§G+20§! Physics Research (£physics ) per Protectorate monthly\n§G+20§! Society Research (£society ) per Protectorate monthly\n§G+20§! Engineering Research (£engineering ) per Protectorate monthly"
