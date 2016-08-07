@@ -1,22 +1,24 @@
-This mod adds two new policy trees called Subjects Taxation and Subjects Support, that gives you the possibility to tax or subside your Vassals or Protectorates (or both).
+This mod adds two new policy trees called "Taxation of Subjects" and "Subsidzation of Subjects", that gives you the possibility to tax or subside your Vassals or Protectorates (or both).
 
-With the Subjects Taxation policies, you can turn your Vassals and Protectorates into Tributary Vassals and Tributary Protectorates, respectively. They act just like their normal counterparts, but give you 10% of their montlhy income in Energy Credits and Minerals. But be careful: they'll not be happy about this new situation and you will receive a severe relationship penalty with them (-75 for vassals, -50 for protectorates).
+With the "Taxation of Subjects" policies, you can turn your Vassals and Protectorates into Tributary Vassals and Tributary Protectorates, respectively. They act just like their normal counterparts, but give you 10% of their montlhy income in Energy Credits and Minerals. But be careful: they'll not be happy about this new situation and you will receive a severe relationship penalty with them (-75 for vassals, -50 for protectorates).
 
-If you're feeling magnanimous, you can instead subsidize your subjects with the Subjects Support policies. Vassals can receive a bonus to Energy Credits and Minerals production, while Protectorates will have their scientific progress greatly improved. These policies will cost you money and science, but will make your subjects much more loyal to you.
+If you're feeling magnanimous, you can instead subsidize your subjects with the "Subsidization of Subjects" policies. Vassals can receive a bonus to Energy Credits and Minerals production, while Protectorates will have their scientific progress greatly improved. These policies will cost you money and science, but will make your subjects much more loyal to you.
 
 [h1]FEATURES[/h1]
-Two new policy trees that let you define your relationship with subjects: Subjects Taxation and Subjects Support
+Two new policy trees that let you define your relationship with subjects: "Taxation of Subjects" and "Subsidization of Subjects"
 
-[b]Subjects Taxation:[/b]
+[b]Taxation of Subjects:[/b]
 [list][*][b]Don't Tax Anyone:[/b] no changes to Vassals or Protectorates
 [*][b]Tax Vassals:[/b] Vassals will become Tributary Vassals and give you 10% of their minerals and credits. They'll receive a -75 opinion modifier because of this.
 [*][b]Tax Protectorates:[/b] Protectorates will become Tributary Protectorates and give you 10% of their minerals and creditys. They'll receive a -50 opinion modifier because of this.
 [*][b]Tax All Subjects:[/b] All subjects, Vassals and Protectorates, will be taxed.[/list]
 
-[b]Subjects Support:[/b]
+[b]Subsidization of Subjectst:[/b]
 [list][*][b]No Subsidies:[/b] no changes to Vassals or Protectorates.
-[*][b]Subsidize Vassals:[/b] Vassals will get the "Overlord Subsidies" modifier, granting them a 5% bonus to minerals and credits, and a +100 opinion modifier. You will get a -10% malus to minerals and credits while this policy is active.
-[*][b]Subsidize Protectorates:[/b] Protectorates will get the "Overlord Subsidies" modifier, granting them a 25% research speed bonus to all technologies, and a +100 opinion modifier. You will get a -10% malus to research speed while this policy is active.
+[*][b]Subsidize Vassals:[/b] Vassals will get the "Overlord Subsidies" modifier, granting them a 5% bonus to minerals and credits, and a +100 opinion modifier. You will get a malus to minerals and credits while this policy is active that goes fro 5% to 15%, depending on the number of Vassals you have.
+[*][b]Subsidize Protectorates:[/b] Protectorates will get the "Overlord Subsidies" modifier, granting them a 25% research speed bonus to all technologies, and a +100 opinion modifier. You will get a -10% malus to all research outputs while this policy is active.
+
+However, the subsidization of Protectorates [i]can[/i] become a bonus. The scientific collaboration between your empire with its subjects will grant you +20 stored research of each type of science per Protectorate monthly. So, if you have enough Protectorates, you can end up with more science than before.
 [*][b]Subsidize All Subjects:[/b] Vassals and Protectorates will get the "Overlord Subsidies" modifier, and a +100 opinion modifier. Your research speed, minerals and energy credits will be decreased by 10% while this policy is active.[/list]
 
 [h1]PLANNED FEATURES[/h1]

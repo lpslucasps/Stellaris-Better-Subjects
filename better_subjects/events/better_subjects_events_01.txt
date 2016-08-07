@@ -3,7 +3,8 @@
 ##########################################################################
 
 namespace = better_subjects
-### Subjects Taxation
+
+### Taxation of Subjects
 
 # Don't Tax Subjects
 country_event {
@@ -17,7 +18,8 @@ country_event {
 	}
 
 	immediate = {
-		country_event = { id = better_subjects.10 }
+		country_event = { id = better_subjects.10 } #Turn T-Vassals into Vassals
+		country_event = { id = better_subjects.11 } #Turn T-Protectorates into Protectorates
 	}
 }
 
@@ -33,7 +35,8 @@ country_event {
 	}
 
 	immediate = {
-		country_event = { id = better_subjects.11 }
+		country_event = { id = better_subjects.12 } #Turn Vassals into T-Vassals
+		country_event = { id = better_subjects.11 } #Turn T-Protectorates into Protectorates
 	}
 }
 
@@ -49,7 +52,8 @@ country_event {
 	}
 
 	immediate = {
-		country_event = { id = better_subjects.12 }
+		country_event = { id = better_subjects.13 } #Turn Protectorates into T-Protectorates
+		country_event = { id = better_subjects.10 } #Turn T-Vassals into Vassals
 	}
 }
 
@@ -65,11 +69,12 @@ country_event {
 	}
 
 	immediate = {
-		country_event = { id = better_subjects.13 }
+		country_event = { id = better_subjects.12 } #Turn Vassals into T-Vassals
+		country_event = { id = better_subjects.13 } #Turn Protectorates into T-Protectorates
 	}
 }
 
-# Yearly pulse
+# Monthly pulse
 country_event = {
 	id = better_subjects.1000
 
@@ -90,24 +95,28 @@ country_event = {
 		if = {
 			limit = { has_policy_flag = dont_tax_subjects }
 			country_event = { id = better_subjects.10 }
+			country_event = { id = better_subjects.11 }
 		}
 		if = {
 			limit = { has_policy_flag = tax_vassals }
+			country_event = { id = better_subjects.12 }
 			country_event = { id = better_subjects.11 }
 		}
 		if = {
 			limit = { has_policy_flag = tax_protectorates	}
-			country_event = { id = better_subjects.12 }
+			country_event = { id = better_subjects.13 }
+			country_event = { id = better_subjects.10 }
 		}
 		if = {
 			limit = { has_policy_flag = tax_all_subjects }
+			country_event = { id = better_subjects.12 }
 			country_event = { id = better_subjects.13 }
 		}
 	}
 }
 
 
-### Subjects Support
+### Subsidization of Subjects
 
 # No subsidies
 country_event = {
@@ -121,7 +130,9 @@ country_event = {
 	}
 
 	immediate = {
-		country_event = { id = better_subjects.20 }
+		country_event = { id = better_subjects.20 } #Remove Vassals' subsidies
+		country_event = { id = better_subjects.21 } #Remove Protectorates' subsidies
+		country_event = { id = better_subjects.25 } #Remove any malus from subsidiziation of Vassals
 	}
 }
 
@@ -137,7 +148,9 @@ country_event = {
 	}
 
 	immediate = {
-		country_event = { id = better_subjects.21 }
+		country_event = { id = better_subjects.22 } #Give Vassals' subsidies
+		country_event = { id = better_subjects.21 } #Remove Protectorates' subsisidies
+		country_event = { id = better_subjects.24 } #Malus from Vassals subsidization
 	}
 }
 
@@ -153,7 +166,9 @@ country_event {
 	}
 
 	immediate = {
-		country_event = { id = better_subjects.22 }
+		country_event = { id = better_subjects.23 } #Give Protectorates subsidies
+		country_event = { id = better_subjects.20 } #Remove Vassal's subsidies
+		country_event = { id = better_subjects.25 } #Remove any malus from subsidiziation of Vassals
 	}
 }
 
@@ -169,11 +184,13 @@ country_event = {
 	}
 
 	immediate = {
-		country_event = {id = better_subjects.23 }
+		country_event = { id = better_subjects.22 } #Give Vassals subsidies
+		country_event = { id = better_subjects.23 } #Give Protectorates subsidies
+		country_event = { id = better_subjects.24 } #Malus from Vassals subsidiziation
 	}
 }
 
-# Yearly pulse
+# Monthly pulse
 country_event = {
 	id = better_subjects.2000
 
@@ -194,21 +211,29 @@ country_event = {
 		if = {
 			limit = { has_policy_flag = no_subsidies }
 			country_event = { id = better_subjects.20 }
-		}
-
-		if = {
-			limit = { has_policy_flag = subsidize_vassals }
 			country_event = { id = better_subjects.21 }
 		}
 
 		if = {
-			limit = { has_policy_flag = subsidize_protectorates }
+			limit = { has_policy_flag = subsidize_vassals }
 			country_event = { id = better_subjects.22 }
+			country_event = { id = better_subjects.21 }
+			country_event = { id = better_subjects.24 }
+		}
+
+		if = {
+			limit = { has_policy_flag = subsidize_protectorates }
+			country_event = { id = better_subjects.23 }
+			country_event = { id = better_subjects.20 }
+			country_event = { id = better_subjects.26 }
 		}
 
 		if = {
 			limit = { has_policy_flag = subsidize_all_subjects }
+			country_event = { id = better_subjects.22 }
 			country_event = { id = better_subjects.23 }
+			country_event = { id = better_subjects.24 }
+			country_event = { id = better_subjects.26 }
 		}
 	}
 }
