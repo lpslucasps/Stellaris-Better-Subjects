@@ -241,13 +241,13 @@ country_event = {
   immediate = {
     every_subject {
       limit = { is_subject_type = "protectorate" }
-      add_physics_research = 20
-      add_society_research = 20
-      add_engineering_research = 20
+      add_physics_research = 10
+      add_society_research = 10
+      add_engineering_research = 10
       ROOT = {
-        add_physics_research = 20
-        add_society_research = 20
-        add_engineering_research = 20
+        add_physics_research = 10
+        add_society_research = 10
+        add_engineering_research = 10
       }
     }
   }
