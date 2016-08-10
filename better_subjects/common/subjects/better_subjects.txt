@@ -1,4 +1,6 @@
-########################################################################## Better Subjects Subject Types
+#########################################################################
+# Better Subjects Subject Types
+# by Lucas Pinheiro Silva
 ##########################################################################
 #
 # can_colonize = allowed to colonize planets

@@ -1,6 +1,7 @@
 ﻿l_english:
  ####################################
  # Better Subjects
+ # by Lucas Pinheiro Silva
  ####################################
  ### Policies
  # Taxation of Subjects
@@ -38,8 +39,8 @@
  opinion_subjects_subsidies:0 "Subsidized"
  overlord_subsidies_vassal:0 "Overlord Subsidies"
  overlord_subsidies_vassal_desc:0 "Our Overlord is supporting our economy, giving us a bonus to Minerals and Energy Credits."
- overlord_subsidies_protectorates:0 "Overlord Subsidies"
- overlord_subsidies_protectorates_desc:0 "Our Overlord is fostering our development, greatly contributing to our scientific endeavours."
+ overlord_subsidies_protectorate:0 "Overlord Subsidies"
+ overlord_subsidies_protectorate_desc:0 "Our Overlord is fostering our development, greatly contributing to our scientific endeavours."
  subsidizing_vassals_1:0 "Subsidizing Vassals"
  subsidizing_vassals_1_desc:0 "We are subsidizing our Vassals' economy, at the expense of some of our own wealth."
  subsidizing_vassals_2:0 "Subsidizing Vassals"
