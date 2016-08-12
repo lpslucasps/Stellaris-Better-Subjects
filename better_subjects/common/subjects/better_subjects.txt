@@ -28,8 +28,8 @@ tvassal = {
 	can_do_diplomacy = no
 
   subject_tax_rate = {
-    minerals = 0.10
-    energy = 0.10
+    minerals = 0.25
+    energy = 0.25
   }
 }
 
@@ -45,8 +45,8 @@ tprotectorate = {
 	overlord_influence = 0.5
 
 	subject_tax_rate {
-		minerals = 0.10
-		energy = 0.10
+		minerals = 0.25
+		energy = 0.25
 	}
 
 	become_vassal = {
