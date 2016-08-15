@@ -22,22 +22,22 @@ Two new policy trees that let you define your relationship with subjects: "Taxat
 
 [h1]PLANNED FEATURES[/h1]
 [list][*]The option to let Vassals colonize
-[*]Demilitarization of subjects
 [*]The ability to demand subjects to stop atrocities (slavery, purging) and/or adopt a democratic government.
 [*]Exclusive events based on your policies with your subjects[/list]
+
+If you'd like to translate or have ideas for new features, please, [url=https://github.com/lpslucasps/Stellaris-Better-Subjects]Fork me on Github![/url]
 
 [h1]LIMITATIONS[/h1]
 [list][*]Empires vassalized after the policy change and protectorates that become vassals will take around 1 month to become Tributary Vassals. Think of this as the time your government needs to implement tax collection on gallactic levels.
 [*]There's no way to discriminate between subjects. The policies changes apply to all of them. Be careful.[/list]
 
 [h1]CHANGELOG[/h1]
-[list][*]10/08/2016
-[list][*]In the end, I had to overwrite the common\diplomatic_actions\00_actions.txt file after all. Any mod that modifies the same file may cause issues. The patches provided by the Unofficial Asimov Hotfix have already been implemented.
+[list][*]15/08/2016
+[list][*]Now Tributary Vassals and Tributary Protectorates have custom icons! They'll be properly shown on diplomatic and contact screens![/list]
+[*]10/08/2016
+[list][*]In the end, I had to overwrite the common\diplomatic_actions\00_actions.txt file after all. Any mod that modifies the same file may cause issues. The patches provided by the Unofficial Asimov Hotfix have already been implemented.[/list]
 [*]08/08/2016
 [list][*]Monthly science from subsidization of Protectorates gone from +20/20/20 to +10/10/10 per Protectorate.[/list][/list]
-
-[h1]KNOWN ISSUES[/h1]
-[list][*]There's no icons for Tributary Vassals and Tributary Protectorates in the Diplomacy and Contacts screens. It seems the icons for those screens are hardcoded. If someone finds a way to add new icons, please, contact me![/list]
 
 [h1]COMPATIBILITY[/h1]
 

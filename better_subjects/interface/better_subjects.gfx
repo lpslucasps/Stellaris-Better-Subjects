@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_diplomacy_status_is_tvassal"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_istvassal.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_diplomacy_status_is_tprotectorate"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_istprotectorate.dds"
+	}
+}
