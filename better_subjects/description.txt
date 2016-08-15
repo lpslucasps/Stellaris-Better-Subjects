@@ -32,13 +32,16 @@ If you'd like to translate or have ideas for new features, please, [url=https://
 [*]There's no way to discriminate between subjects. The policies changes apply to all of them. Be careful.[/list]
 
 [h1]CHANGELOG[/h1]
+<<<<<<< HEAD
 [list][*]10/08/2016
+=======
+[list][*]15/08/2016
+[list][*]Now Tributary Vassals and Tributary Protectorates have custom icons! They'll be properly shown on diplomatic and contact screens![/list]
+[*]10/08/2016
+>>>>>>> refs/remotes/origin/master
 [list][*]In the end, I had to overwrite the common\diplomatic_actions\00_actions.txt file after all. Any mod that modifies the same file may cause issues. The patches provided by the Unofficial Asimov Hotfix have already been implemented.[/list]
 [*]08/08/2016
 [list][*]Monthly science from subsidization of Protectorates gone from +20/20/20 to +10/10/10 per Protectorate.[/list][/list]
-
-[h1]KNOWN ISSUES[/h1]
-[list][*]There's no icons for Tributary Vassals and Tributary Protectorates in the Diplomacy and Contacts screens. It seems the icons for those screens are hardcoded. If someone finds a way to add new icons, please, contact me![/list]
 
 [h1]COMPATIBILITY[/h1]
 
